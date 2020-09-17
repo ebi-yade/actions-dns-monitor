@@ -14,9 +14,9 @@ jobs:
           ref: 'master'
       - name: Set current date as ENV / CURRENT_TIME
         run: echo "::set-env name=CURRENT_TIME::$(date +'%Y-%m-%dT%H:%M:%S')"
-      - name:
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
-        with: Set up Python 3.8
+        with:
           python-version: '3.8'
       - name: Run Python Script
         run: python .
